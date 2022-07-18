@@ -19,9 +19,13 @@ const lannisterSchema = new Schema(
         splitType: {
           type: String,
           required: true,
-          enum: ["FLAT", "PERCENTAGE", "RATIO"]
+          enum: ["FLAT", "PERCENTAGE", "RATIO"],
         },
         splitValue: {
+          type: Number,
+          required: true,
+        },
+        splitAmount: {
           type: Number,
           required: true,
         },
@@ -29,8 +33,13 @@ const lannisterSchema = new Schema(
           type: String,
           required: true,
         },
+        _id: false,
       },
     ],
+    balance: {
+      type: Number,
+      required: true,
+    },
   },
   {
     timestamps: true,
