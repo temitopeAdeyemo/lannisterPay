@@ -3,7 +3,6 @@ const share = async (req, res, next) => {
   try {
     const { amount, customerEmail, splitInfos, splitType, splitValue } =
       req.body;
-    // const splitInfoo = [];
     let Lannistercode = 2014;
     const flatArray = [];
     const percentageArray = [];
